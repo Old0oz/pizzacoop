@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pizzacoop</title>
+</head>
+<body>
+<form action="/prestashop/contactez-nous" method="post" class="std" enctype="multipart/form-data">
+		<fieldset>
+			<h3>Envoyez un message</h3>
+			<p class="select">
+				<label for="id_contact">Objet</label>
+							<select id="id_contact" name="id_contact" onchange="showElemFromSelect('id_contact', 'desc_contact')">
+					<option value="0">-- Choisir --</option>
+									<option value="2">Service client</option>
+									<option value="1">Webmaster</option>
+								</select>
+			</p>
+			<p id="desc_contact0" class="desc_contact">&nbsp;</p>
+									<p id="desc_contact2" class="desc_contact" style="display:none;">
+						<label>&nbsp;</label>Pour toute question ou réclamation sur une commande
+					</p>
+									<p id="desc_contact1" class="desc_contact" style="display:none;">
+						<label>&nbsp;</label>Si un problème technique survient sur le site
+					</p>
+										<p class="text">
+				<label for="email">Votre adresse e-mail</label>
+									<input type="text" id="email" name="from" value="">
+							</p>
+								<p class="text select">
+				<label for="id_order">Numéro de commande</label>
+									<input type="text" name="id_order" id="id_order" value="">
+							</p>
+													<p class="text">
+			<label for="fileUpload">Fichier</label>
+				<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+				<input type="file" name="fileUpload" id="fileUpload">
+			</p>
+				<p class="textarea">
+			<label for="message">Message</label>
+			 <textarea id="message" name="message" rows="15" cols="10"></textarea>
+		</p>
+		<p class="submit">
+			<input type="submit" name="submitMessage" id="submitMessage" value="Envoyer" class="button_large" onclick="$(this).hide();">
+		</p>
+	</fieldset>
+</form>
+</body>
+</html>
